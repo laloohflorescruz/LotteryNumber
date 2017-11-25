@@ -1,0 +1,11 @@
+﻿@model Lotery.Models.NumberViewModel
+@using Lotery.Models
+
+@Html.Partial("_ModalHeader", new ModalHeader { Heading = "Borrar sorteo" })
+
+<div class="modal-body form-horizontal">
+    Quieres borrar el sorteo del dia @Model.LotteryDate?
+</div>
+@Html.Partial("_ModalFooter", new ModalFooter { SubmitButtonText = "Borrar" })
+}
+

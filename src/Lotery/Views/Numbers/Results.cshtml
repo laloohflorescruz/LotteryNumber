@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Lotery.Data.Numbers>
+
+
+
+<h1>Resultados</h1>
+
+<h3>Numeros Ganadores</h3>
+<table class="table table-striped table-hover">
+    <thead>
+        <tr class="alert-info">
+            <th>1er. Premio</th>
+            <th>2do. Premio</th>
+            <th>3er. Premio</th>
+            <th>Fecha</th>
+        </tr>
+    </thead>
+
+    @foreach (var item in Model)
+    {
+        <tbody>
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.FirstPrize)</td>
+                <td>@Html.DisplayFor(modelItem => item.SecondPrize)</td>
+                <td>@Html.DisplayFor(modelItem => item.ThirdPrize)</td>
+                <td>@Html.DisplayFor(modelItem => item.LotteryDate)</td>
+            </tr>
+        </tbody>
+    }
+</table>
